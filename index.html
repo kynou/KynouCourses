@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <th>Employee ID</th>
+            <th>Employee First Name</th>
+            <th>Employee Last Name</th>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{ employee.employee_id }}</td>
+                <td>{{ employee.employee_first_name }}</td>
+                <td>{{ employee.employee_last_name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <hr/>
+    <form>
+        <div>
+            <label>Employee ID:</label>
+            <input type="text" name="employee_id"/>
+        </div>
+        <div>
+            <label>Employee First Name:</label>
+            <input type="text" name="employee_first_name"/>
+        </div>
+        <div>
+            <label>Employee Last Name:</label>
+            <input type="text" name="employee_last_name"/>
+        </div>
+        <div>
+            <input type="submit" value="Submit"/>
+        </div>
+    </form>
+</body>
+</html>
